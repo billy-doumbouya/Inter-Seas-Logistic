@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "quote": "Request a Quote"
+  },
+  "hero": {
+    "badge": "Logistics · Transport · Maritime",
+    "title": "Your trusted partner in",
+    "titleAccent": "maritime logistics",
+    "subtitle": "12 years of expertise serving Guinea and the sub-region. Logistics, transport, maritime consignment — we handle every operation with precision and reliability.",
+    "cta": "Request a Quote",
+    "ctaSecondary": "Discover our services",
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Completed projects",
+      "clients": "Active clients",
+      "services": "Areas of expertise"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "A Guinean company at the heart of African logistics",
+    "history": "Our History",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values",
+    "ceo": "CEO's Message",
+    "team": "Our Team",
+    "partners": "Our Partners"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete logistics solutions tailored to your needs",
+    "quoteBtn": "Request a Quote",
+    "learnMore": "Learn more"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "Discover our achievements in images",
+    "all": "All",
+    "maritime": "Maritime",
+    "transport": "Transport",
+    "logistics": "Logistics",
+    "civil": "Civil Engineering"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our team is available to answer all your questions",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending. Please try again."
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "social": "Social Media"
+    }
+  },
+  "quote": {
+    "title": "Request a Quote",
+    "subtitle": "Fill out this form and our team will contact you within 24–48 hours",
+    "form": {
+      "fullName": "Full name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "company": "Company / Organization",
+      "serviceType": "Service type *",
+      "origin": "Place of origin",
+      "destination": "Destination",
+      "cargoType": "Cargo type",
+      "weight": "Estimated weight (tons)",
+      "volume": "Estimated volume (m³)",
+      "description": "Detailed description *",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "success": "Request sent! We will contact you within 24–48 hours.",
+      "error": "Error sending. Please try again."
+    },
+    "serviceOptions": {
+      "logistics": "Logistics",
+      "transport": "Transport",
+      "maritime": "Maritime Consignment",
+      "rental": "Equipment Rental",
+      "civil": "Civil Engineering",
+      "other": "Other"
+    }
+  },
+  "chatbot": {
+    "title": "ARIA Assistant",
+    "subtitle": "Inter Seas Logistic",
+    "placeholder": "Ask your question...",
+    "send": "Send",
+    "welcome": "Hello! I'm ARIA, the virtual assistant of Inter Seas Logistic. How can I help you today?",
+    "error": "Sorry, an error occurred. Please try again.",
+    "thinking": "Thinking..."
+  },
+  "footer": {
+    "tagline": "Your trusted partner in maritime logistics since 2014.",
+    "links": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "madeIn": "Made in Guinea 🇬🇳"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "readMore": "Read more"
+  }
+}

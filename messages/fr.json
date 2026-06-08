@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "quote": "Demander un devis"
+  },
+  "hero": {
+    "badge": "Logistique · Transport · Maritime",
+    "title": "Votre partenaire de confiance en",
+    "titleAccent": "logistique maritime",
+    "subtitle": "12 ans d'expertise au service de la Guinée et de la sous-région. Logistique, transport, consignation maritime — nous assurons chaque opération avec précision et fiabilité.",
+    "cta": "Demander un devis",
+    "ctaSecondary": "Découvrir nos services",
+    "stats": {
+      "experience": "Années d'expérience",
+      "projects": "Projets réalisés",
+      "clients": "Clients actifs",
+      "services": "Domaines d'activité"
+    }
+  },
+  "about": {
+    "title": "À propos de nous",
+    "subtitle": "Une entreprise guinéenne au cœur de la logistique africaine",
+    "history": "Notre histoire",
+    "mission": "Notre mission",
+    "vision": "Notre vision",
+    "values": "Nos valeurs",
+    "ceo": "Mot du PDG",
+    "team": "Notre équipe",
+    "partners": "Nos partenaires"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions logistiques complètes adaptées à vos besoins",
+    "quoteBtn": "Demander un devis",
+    "learnMore": "En savoir plus"
+  },
+  "gallery": {
+    "title": "Notre Galerie",
+    "subtitle": "Découvrez nos réalisations en images",
+    "all": "Tout",
+    "maritime": "Maritime",
+    "transport": "Transport",
+    "logistics": "Logistique",
+    "civil": "Génie civil"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe est disponible pour répondre à toutes vos questions",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Réessayez."
+    },
+    "info": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "social": "Réseaux sociaux"
+    }
+  },
+  "quote": {
+    "title": "Demande de devis",
+    "subtitle": "Remplissez ce formulaire et notre équipe vous contactera sous 24–48h",
+    "form": {
+      "fullName": "Nom complet *",
+      "email": "Email *",
+      "phone": "Téléphone",
+      "company": "Entreprise / Organisation",
+      "serviceType": "Type de service *",
+      "origin": "Lieu d'origine",
+      "destination": "Destination",
+      "cargoType": "Type de cargaison",
+      "weight": "Poids estimé (tonnes)",
+      "volume": "Volume estimé (m³)",
+      "description": "Description détaillée *",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi en cours...",
+      "success": "Demande envoyée ! Nous vous contactons sous 24–48h.",
+      "error": "Erreur lors de l'envoi. Réessayez."
+    },
+    "serviceOptions": {
+      "logistics": "Logistique",
+      "transport": "Transport",
+      "maritime": "Consignation Maritime",
+      "rental": "Location d'équipement",
+      "civil": "Génie Civil",
+      "other": "Autre"
+    }
+  },
+  "chatbot": {
+    "title": "Assistant ARIA",
+    "subtitle": "Inter Seas Logistic",
+    "placeholder": "Posez votre question...",
+    "send": "Envoyer",
+    "welcome": "Bonjour ! Je suis ARIA, l'assistante virtuelle d'Inter Seas Logistic. Comment puis-je vous aider aujourd'hui ?",
+    "error": "Désolé, une erreur est survenue. Réessayez.",
+    "thinking": "En train de répondre..."
+  },
+  "footer": {
+    "tagline": "Votre partenaire de confiance en logistique maritime depuis 2014.",
+    "links": "Liens rapides",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "madeIn": "Fait en Guinée 🇬🇳"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "readMore": "Lire plus"
+  }
+}
