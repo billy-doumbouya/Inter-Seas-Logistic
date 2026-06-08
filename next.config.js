@@ -7,6 +7,9 @@ const nextConfig = {
       { protocol: "https", hostname: "via.placeholder.com" },
     ],
   },
+  experimental: {
+    serverComponentsExternalPackages: ["@prisma/client", "bcryptjs"],
+  },
 };
 
 module.exports = nextConfig;
