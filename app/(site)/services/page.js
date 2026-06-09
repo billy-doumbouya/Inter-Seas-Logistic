@@ -1,16 +1,24 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Package, Truck, Ship, Wrench, Building2, ArrowRight } from 'lucide-react'
-import prisma from '@/lib/prisma'
-import { PLACEHOLDERS } from '@/placeholders'
-import CTASection from '@/components/sections/CTASection'
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Package,
+  Truck,
+  Ship,
+  Wrench,
+  Building2,
+  ArrowRight,
+} from "lucide-react";
+import prisma from "@/lib/prisma";
+import { PLACEHOLDERS } from "@/placeholders";
+import CTASection from "@/components/sections/CTASection";
 
 export const metadata = {
-  title: 'Nos Services — Inter Seas Logistic',
-  description: 'Logistique, transport, consignation maritime, location et génie civil en Guinée.',
-}
+  title: "Nos Services — Inter Seas Logistic",
+  description:
+    "Logistique, transport, consignation maritime, location et génie civil en Guinée.",
+};
 
-const ICON_MAP = { Package, Truck, Ship, Wrench, Building2 }
+const ICON_MAP = { Package, Truck, Ship, Wrench, Building2 };
 
 const FALLBACK_IMAGES = {
   Package: PLACEHOLDERS.services.logistics.url,
@@ -18,18 +26,21 @@ const FALLBACK_IMAGES = {
   Ship: PLACEHOLDERS.services.maritime.url,
   Wrench: PLACEHOLDERS.services.rental.url,
   Building2: PLACEHOLDERS.services.civil.url,
-}
+};
 
 async function getServices() {
   try {
-    return await prisma.service.findMany({ where: { active: true }, orderBy: { order: 'asc' } })
+    return await prisma.service.findMany({
+      where: { active: true },
+      orderBy: { order: "asc" },
+    });
   } catch {
-    return []
+    return [];
   }
 }
 
 export default async function ServicesPage() {
-  const services = await getServices()
+  const services = await getServices();
 
   return (
     <>
@@ -38,9 +49,12 @@ export default async function ServicesPage() {
         <div className="absolute inset-0 bg-noise opacity-20" />
         <div className="container-custom relative z-10 text-center">
           <div className="w-16 h-1 bg-brand-red rounded-full mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Nos Services</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+            Nos Services
+          </h1>
           <p className="text-white/70 text-lg max-w-xl mx-auto">
-            Des solutions logistiques complètes adaptées à vos besoins en Guinée et dans la sous-région.
+            Des solutions logistiques complètes adaptées à vos besoins en Guinée
+            et dans la sous-région.
           </p>
         </div>
       </section>
@@ -49,17 +63,22 @@ export default async function ServicesPage() {
       <section className="section bg-white">
         <div className="container-custom space-y-20">
           {services.map((service, i) => {
-            const Icon = ICON_MAP[service.icon] || Package
-            const imageUrl = service.imageUrl || FALLBACK_IMAGES[service.icon] || PLACEHOLDERS.services.logistics.url
-            const isEven = i % 2 === 0
+            const Icon = ICON_MAP[service.icon] || Package;
+            const imageUrl =
+              service.imageUrl ||
+              FALLBACK_IMAGES[service.icon] ||
+              PLACEHOLDERS.services.logistics.url;
+            const isEven = i % 2 === 0;
 
             return (
               <div
                 key={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? "lg:flex-row-reverse" : ""}`}
               >
                 {/* Image */}
-                <div className={`relative h-80 rounded-3xl overflow-hidden shadow-brand-lg ${!isEven ? 'lg:order-2' : ''}`}>
+                <div
+                  className={`relative h-80 rounded-3xl overflow-hidden shadow-brand-lg ${!isEven ? "lg:order-2" : ""}`}
+                >
                   <Image
                     src={imageUrl}
                     alt={service.titleFr}
@@ -76,16 +95,20 @@ export default async function ServicesPage() {
                 </div>
 
                 {/* Content */}
-                <div className={!isEven ? 'lg:order-1' : ''}>
+                <div className={!isEven ? "lg:order-1" : ""}>
                   <span className="badge-red mb-4">Service #{i + 1}</span>
-                  <h2 className="text-3xl font-display font-bold text-brand-blue mb-4">{service.titleFr}</h2>
-                  <p className="text-brand-gray-500 leading-relaxed mb-6">{service.descFr}</p>
+                  <h2 className="text-3xl font-display font-bold text-brand-blue mb-4">
+                    {service.titleFr}
+                  </h2>
+                  <p className="text-brand-gray-500 leading-relaxed mb-6">
+                    {service.descFr}
+                  </p>
                   <Link href="/quote" className="btn-primary">
                     Demander un devis <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </section>
@@ -100,15 +123,24 @@ export default async function ServicesPage() {
                   Dispatching Logistique & Transport
                 </h3>
                 <p className="text-white/80 leading-relaxed mb-6">
-                  Nous proposons un service de dispatching structuré pour l&apos;acheminement de vos
-                  marchandises. Chaque devis est personnalisé selon la nature de la cargaison,
-                  l&apos;origine, la destination et les délais souhaités.
+                  Nous proposons un service de dispatching structuré pour
+                  l&apos;acheminement de vos marchandises. Chaque devis est
+                  personnalisé selon la nature de la cargaison, l&apos;origine,
+                  la destination et les délais souhaités.
                 </p>
                 <ul className="space-y-2 text-white/80 text-sm mb-6">
-                  <li className="flex items-center gap-2">✅ Transport de conteneurs</li>
-                  <li className="flex items-center gap-2">✅ Livraison Rose Kondiano</li>
-                  <li className="flex items-center gap-2">✅ Fret lourd et spécial</li>
-                  <li className="flex items-center gap-2">✅ Groupage et consolidation</li>
+                  <li className="flex items-center gap-2">
+                    ✅ Transport de conteneurs
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✅ Livraison Rose Kondiano
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✅ Fret lourd et spécial
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✅ Groupage et consolidation
+                  </li>
                 </ul>
                 <Link href="/quote" className="btn-outline-white">
                   Demander un devis <ArrowRight size={16} />
@@ -116,9 +148,9 @@ export default async function ServicesPage() {
               </div>
               <div className="hidden md:flex flex-col gap-4">
                 {[
-                  { label: 'Délai de réponse', value: '24–48h' },
-                  { label: 'Couverture', value: 'Guinée & sous-région' },
-                  { label: 'Flotte propre', value: 'Disponible immédiatement' },
+                  { label: "Délai de réponse", value: "24–48h" },
+                  { label: "Couverture", value: "Guinée & sous-région" },
+                  { label: "Flotte propre", value: "Disponible immédiatement" },
                 ].map((item) => (
                   <div key={item.label} className="bg-white/10 rounded-2xl p-4">
                     <p className="text-white/60 text-sm">{item.label}</p>
@@ -133,5 +165,5 @@ export default async function ServicesPage() {
 
       <CTASection />
     </>
-  )
+  );
 }

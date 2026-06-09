@@ -13,6 +13,7 @@
     "db:seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
     "@prisma/client": "^5.14.0",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
@@ -27,10 +28,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
+    "react-select": "^5.10.2",
+    "react-spinners": "^0.17.0",
     "sharp": "^0.33.4",
     "sonner": "^1.5.0",
-    "yup": "^1.4.0",
-    "@hookform/resolvers": "^3.6.0"
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import {
   LayoutDashboard,
   Package,
@@ -27,6 +28,8 @@ const NAV = [
 export default function AdminSidebar({ user }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   const SidebarContent = () => (
     <div className="flex flex-col h-full">
@@ -70,7 +73,7 @@ export default function AdminSidebar({ user }) {
           <p className="text-white/50 text-xs truncate">{user?.email}</p>
         </div>
         <button
-          onClick={() => signOut({ callbackUrl: "/admin/login" })}
+          onClick={() => setShowLogoutConfirm(true)}
           className="admin-sidebar-link w-full text-brand-red-light hover:text-white"
         >
           <LogOut size={16} /> Déconnexion
@@ -105,6 +108,47 @@ export default function AdminSidebar({ user }) {
             <SidebarContent />
           </aside>
         </>
+      )}
+
+      {showLogoutConfirm && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
+          <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl">
+            <h2 className="text-xl font-semibold text-brand-blue">
+              Confirmer la déconnexion
+            </h2>
+            <p className="mt-3 text-sm text-slate-600">
+              Voulez-vous vraiment vous déconnecter ?
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <button
+                type="button"
+                className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                onClick={() => setShowLogoutConfirm(false)}
+                disabled={isLoggingOut}
+              >
+                Annuler
+              </button>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-full bg-brand-red-light px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600 disabled:cursor-not-allowed disabled:bg-red-400"
+                onClick={async () => {
+                  setIsLoggingOut(true);
+                  await signOut({ callbackUrl: "/admin/login" });
+                }}
+                disabled={isLoggingOut}
+              >
+                {isLoggingOut ? (
+                  <span className="inline-flex items-center gap-2">
+                    <ClipLoader size={18} color="#ffffff" />
+                    Déconnexion...
+                  </span>
+                ) : (
+                  "Confirmer"
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </>
   );
