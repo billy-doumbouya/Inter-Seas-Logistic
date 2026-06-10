@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Phone } from "lucide-react";
+import ISLLogo from "../ui/logo";
 
 const NAV_LINKS = [
   { href: "/", labelFr: "Accueil", labelEn: "Home" },
@@ -54,19 +55,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-brand-blue font-display font-bold text-sm">
-                ISL
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="text-white font-display font-bold text-lg leading-tight">
-                Inter Seas
-              </p>
-              <p className="text-brand-gray-300 text-xs font-medium tracking-widest uppercase">
-                Logistic
-              </p>
-            </div>
+            <ISLLogo variant="full" theme="dark" size="md" />
           </Link>
 
           {/* Desktop Nav */}

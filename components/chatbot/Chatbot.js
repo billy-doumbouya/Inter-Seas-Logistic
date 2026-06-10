@@ -43,7 +43,7 @@ export default function Chatbot() {
         content: m.content,
       }));
 
-      // Appel de l'API locale via l'instance Axios configurée
+      // Appel de l'API locale (qui est maintenant branchée sur Google AI Studio)
       const { data } = await api.post("/chat", { messages: history });
 
       setMessages((prev) => [
@@ -52,7 +52,11 @@ export default function Chatbot() {
       ]);
     } catch (err) {
       console.error("Chatbot send error:", err);
-      const detail = err?.message ? ` (${err.message})` : "";
+
+      // Récupère le message d'erreur précis renvoyé par ton API route si disponible
+      const serverError = err?.response?.data?.error;
+      const detail = serverError ? ` (${serverError})` : "";
+
       setMessages((prev) => [
         ...prev,
         {

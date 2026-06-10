@@ -7,6 +7,7 @@ import {
   Linkedin,
   ArrowRight,
 } from "lucide-react";
+import ISLLogo from "../ui/logo";
 
 const LINKS = [
   { href: "/", fr: "Accueil", en: "Home" },
@@ -37,9 +38,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                <span className="text-brand-blue font-display font-bold">
-                  ISL
-                </span>
+                <ISLLogo variant="compact" theme="light" size="sm" />
               </div>
               <div>
                 <p className="font-display font-bold text-xl">Inter Seas</p>
@@ -180,7 +179,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-brand-gray-500 text-sm">
-            © {year} Inter Seas Logistic. Tous droits réservés.
+            &copy; {year} Inter Seas Logistic. Tous droits réservés.
           </p>
           <p className="text-brand-gray-500 text-sm">Fait en Guinée 🇬🇳</p>
         </div>
